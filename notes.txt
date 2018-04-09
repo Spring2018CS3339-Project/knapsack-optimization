@@ -1,0 +1,16 @@
+Use deadcode optimization to check whether there is code that can be removed that doesn't contribute to the final outcome.
+
+Step 1:
+Run each optimization one by one.
+
+Pull up whole list of flags -q. Make a list of all the flags, record the time for each run with each optimization.
+Also, run with default and level optimizations.
+
+1.05 speedup is what we are going to consider.
+
+Step 2:
+Using the data from the run with each individual optimization. Look at optimizations and pull the best 3-5 flags to analyze.
+Possibly mix and match optimization levels with flags.
+Mix and match the best flags to look at performance.
+
+
