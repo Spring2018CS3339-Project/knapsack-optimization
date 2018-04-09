@@ -1,4 +1,4 @@
-DIRS=src src2
+DIRS=src
 .PHONY: clean $(DIRS)
 
 $(DIRS):
