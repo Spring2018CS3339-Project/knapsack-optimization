@@ -1,8 +1,7 @@
-DIRS=src
-.PHONY: clean $(DIRS)
+.PHONY: clean
 
-$(DIRS):
-	+$(MAKE) -C $@
+makeall:
+	+$(MAKE) -C src
 
 clean:
-	+$(MAKE) -C $(DIRS) clean
+	+$(MAKE) -C src clean

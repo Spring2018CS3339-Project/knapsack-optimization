@@ -1,19 +1,16 @@
-exe=test1
-objects=knapsack.o
-cc=g++
+exe=test
 input=input
-flags=-Wall -g -O3
+ffile=flags.txt
 
-.PHONY: clean
+.PHONY: clean cleanall optimization_test run
 
-exc: $(exe)
-	./$(exe) $(input) > log.dat
+run: optimization_test clean
 
-$(exe): $(objects)
-	$(cc) -o $(exe) $(objects)
+optimization_test:
+	./execute_test.sh $(exe) $(input) $(ffile)
 
-$(objects): %.o: %.cpp
-	$(cc) -c $(flags) $< -o $@
+clean:
+	rm results.dat *.o $(exe)
 
-clean: 
-	rm *.dat $(objects) $(exe)
+cleanall:
+	rm *.dat
