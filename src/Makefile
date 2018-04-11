@@ -4,13 +4,13 @@ ffile=flags.txt
 
 .PHONY: clean optimization_test run
 
-run: optimization_test
+run: optimization_test clean
 
 optimization_test:
 	./execute_test.sh $(exe) $(input) $(ffile)
 
 clean:
-	rm $(exe) *.dat
+	rm *.dat
 
 cleandata:
-	rm *.csv *.out *.dat
+	rm *.csv *.out

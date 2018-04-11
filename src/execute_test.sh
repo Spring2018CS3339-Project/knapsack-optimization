@@ -8,15 +8,16 @@ fi
 exc=$1
 input=$2
 flags=$3
-spreadsheet="data_run_$(date +'%T').csv"
-topdata="top-output.out"
+ts=$(date +'%s')
+spreadsheet="data_run_$ts.csv"
+topdata="top_output_$ts.out"
 file="knapsack.cpp"
 timeout="time_data.dat"
 stdout="exc.dat"
 
 echo "" > results.dat
 
-top -b -n1 > "$topdata"
+top -b -n 1 | head -n 5 > "$topdata"
 
 echo "access time,date,knapsack files,flags,real time,user time,sys time" > "$spreadsheet"
 # Read the file line by line.
@@ -46,5 +47,7 @@ do
       fi
    done
 done
+
+rm "$exc"
 
 exit 0
