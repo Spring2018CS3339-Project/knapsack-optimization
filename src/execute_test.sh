@@ -14,6 +14,8 @@ file="knapsack.cpp"
 timeout="time_data.dat"
 stdout="exc.dat"
 
+echo "" > results.dat
+
 top -b -n1 > "$topdata"
 
 echo "access time,date,knapsack files,flags,real time,user time,sys time" > "$spreadsheet"

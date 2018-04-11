@@ -12,5 +12,5 @@ optimization_test:
 clean:
 	rm $(exe) *.dat
 
-cleancsv:
-	rm *.csv
+cleandata:
+	rm *.csv *.out *.dat
