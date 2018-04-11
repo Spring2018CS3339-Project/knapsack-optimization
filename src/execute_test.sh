@@ -11,7 +11,7 @@ flags=$3
 
 top -b -n1 > top-output.dat
 
-echo "access time,date,top(users shared),knapsack files,flags,real time,user time,sys time" > spreadsheet.dat
+echo "access time,date,knapsack files,flags,real time,user time,sys time" > spreadsheet.csv
 # Read the file line by line.
 # Use each flag to compile the program.
 cat $flags | while read flag
@@ -19,7 +19,7 @@ do
    # Compile with optimization
    g++ -$flag -o $exc knapsack.cpp
    # Run the experiment and store the results
-   new_line="$(date +'%T'),$(date),TBD,knapsack.cpp,$flag"
+   new_line="$(date +'%T'),$(date),knapsack.cpp,$flag"
    counter=0
    (time ./$exc $input) > exc.dat 2> time_data.dat
    cat time_data.dat| while read line
