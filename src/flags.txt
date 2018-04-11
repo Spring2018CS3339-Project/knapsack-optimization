@@ -1,3 +1,5 @@
-O1
-O2
-O2
+-O1
+-O2
+-O3
+-O0
+-ftree-loop-linear -fdce

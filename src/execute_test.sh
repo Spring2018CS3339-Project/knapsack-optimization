@@ -9,7 +9,7 @@ exc=$1
 input=$2
 flags=$3
 spreadsheet="data_run_$(date +'%T').csv"
-topdata="top-output.dat"
+topdata="top-output.out"
 file="knapsack.cpp"
 timeout="time_data.dat"
 stdout="exc.dat"
@@ -23,7 +23,7 @@ cat $flags | while read flag
 do
    printf "Compiling and running %s with optimization(s): %s\n" "$file" "$flag"
    # Compile with optimization
-   g++ -$flag -o $exc "$file"
+   g++ $flag -o $exc "$file"
    # Run the experiment and store the results
    new_line="$(date +'%T'),$(date),$file,$flag"
    counter=0

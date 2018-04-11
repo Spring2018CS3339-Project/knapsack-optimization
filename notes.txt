@@ -8,6 +8,10 @@ Also, run with default and level optimizations.
 
 1.05 speedup is what we are going to consider.
 
+Modify the csv date to be from 1970.
+Check the flags can be provided with -o
+Top 5 lines of top
+
 Step 2:
 Using the data from the run with each individual optimization. Look at optimizations and pull the best 3-5 flags to analyze.
 Possibly mix and match optimization levels with flags.
