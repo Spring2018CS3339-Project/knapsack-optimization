@@ -8,21 +8,27 @@ fi
 exc=$1
 input=$2
 flags=$3
+spreadsheet="data_run_$(date +'%T').csv"
+topdata="top-output.dat"
+file="knapsack.cpp"
+timeout="time_data.dat"
+stdout="exc.dat"
 
-top -b -n1 > top-output.dat
+top -b -n1 > "$topdata"
 
-echo "access time,date,knapsack files,flags,real time,user time,sys time" > spreadsheet.csv
+echo "access time,date,knapsack files,flags,real time,user time,sys time" > "$spreadsheet"
 # Read the file line by line.
 # Use each flag to compile the program.
 cat $flags | while read flag
 do
+   printf "Compiling and running %s with optimization(s): %s\n" "$file" "$flag"
    # Compile with optimization
-   g++ -$flag -o $exc knapsack.cpp
+   g++ -$flag -o $exc "$file"
    # Run the experiment and store the results
-   new_line="$(date +'%T'),$(date),knapsack.cpp,$flag"
+   new_line="$(date +'%T'),$(date),$file,$flag"
    counter=0
-   (time ./$exc $input) > exc.dat 2> time_data.dat
-   cat time_data.dat| while read line
+   (time ./$exc $input) > "$stdout" 2> "$timeout"
+   cat "$timeout" | while read line
    do
       val=$(echo $line | awk '{print $2}')
       # Skip if the val is blank
@@ -34,7 +40,7 @@ do
 
       # Print the completed line to the file
       if [ $counter -eq 3 ]; then
-         echo $new_line >> spreadsheet.dat
+         echo $new_line >> "$spreadsheet"
       fi
    done
 done
