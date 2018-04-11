@@ -9,6 +9,8 @@ exc=$1
 input=$2
 flags=$3
 
+top -b -n1 > top-output.dat
+
 echo "access time,date,top(users shared),knapsack files,flags,real time,user time,sys time" > spreadsheet.dat
 # Read the file line by line.
 # Use each flag to compile the program.
