@@ -39,7 +39,7 @@
 -ffinite-math-only
 -ffloat-store
 -fforward-propagate
--ffp-contract=
+-ffp-contract=fast
 -ffunction-cse
 -fgcse
 -fgcse-after-reload
@@ -49,7 +49,6 @@
 -fgraphite
 -fgraphite-identity
 -fguess-branch-probability
--fhandle-exceptions
 -fhoist-adjacent-loads
 -fif-conversion
 -fif-conversion2
@@ -70,10 +69,10 @@
 -fipa-ra
 -fipa-reference
 -fipa-sra
--fira-algorithm=
+-fira-algorithm=CB
 -fira-hoist-pressure
 -fira-loop-pressure
--fira-region=
+-fira-region=[default]
 -fira-share-save-slots
 -fira-share-spill-slots
 -fisolate-erroneous-paths-attribute
@@ -100,7 +99,6 @@
 -foptimize-sibling-calls
 -foptimize-strlen
 -fpack-struct
--fpack-struct=<number>
 -fpartial-inlining
 -fpeel-loops
 -fpeephole
@@ -130,8 +128,6 @@
 -fsched-spec-load-dangerous
 -fsched-stalled-insns
 -fsched-stalled-insns-dep
--fsched-stalled-insns-dep=<number>
--fsched-stalled-insns=<number>
 -fsched2-use-superblocks
 -fschedule-fusion
 -fschedule-insns
@@ -148,12 +144,12 @@
 -fshrink-wrap
 -fsignaling-nans
 -fsigned-zeros
--fsimd-cost-model=
+-fsimd-cost-model=unlimited
 -fsingle-precision-constant
 -fsplit-ivs-in-unroller
 -fsplit-wide-types
 -fssa-phiopt
--fstack-reuse=
+-fstack-reuse=all
 -fstdarg-opt
 -fstrict-aliasing
 -fstrict-enums
@@ -187,7 +183,7 @@
 -ftree-loop-optimize
 -ftree-loop-vectorize
 -ftree-lrs
--ftree-parallelize-loops=
+-ftree-parallelize-loops=0x1
 -ftree-partial-pre
 -ftree-phiprop
 -ftree-pre
@@ -214,8 +210,9 @@
 -fvar-tracking-assignments-toggle
 -fvar-tracking-uninit
 -fvariable-expansion-in-unroller
--fvect-cost-model=
+-fvect-cost-model=[default]
+-fvect-cost-model=cheap
+-fvect-cost-model=dynamic
 -fvpt
 -fweb
 -fwrapv
-
