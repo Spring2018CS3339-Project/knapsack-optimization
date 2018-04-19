@@ -1,4 +1,4 @@
--O0
+0
 -O1
 -O2
 -O3
@@ -72,7 +72,9 @@
 -fira-algorithm=CB
 -fira-hoist-pressure
 -fira-loop-pressure
--fira-region=[default]
+-fira-region=all
+-fira-region=mixed
+-fira-region=one
 -fira-share-save-slots
 -fira-share-spill-slots
 -fisolate-erroneous-paths-attribute
@@ -98,7 +100,6 @@
 -fopt-info
 -foptimize-sibling-calls
 -foptimize-strlen
--fpack-struct
 -fpartial-inlining
 -fpeel-loops
 -fpeephole
@@ -145,11 +146,15 @@
 -fsignaling-nans
 -fsigned-zeros
 -fsimd-cost-model=unlimited
+-fsimd-cost-model=dynamic
+-fsimd-cost-model=cheap
 -fsingle-precision-constant
 -fsplit-ivs-in-unroller
 -fsplit-wide-types
 -fssa-phiopt
 -fstack-reuse=all
+-fstack-reuse=named_vars
+-fstack-reuse=none
 -fstdarg-opt
 -fstrict-aliasing
 -fstrict-enums
@@ -184,6 +189,11 @@
 -ftree-loop-vectorize
 -ftree-lrs
 -ftree-parallelize-loops=0x1
+-ftree-parallelize-loops=0xA
+-ftree-parallelize-loops=0x32
+-ftree-parallelize-loops=0x64
+-ftree-parallelize-loops=0x96
+-ftree-parallelize-loops=0xA0
 -ftree-partial-pre
 -ftree-phiprop
 -ftree-pre
@@ -210,9 +220,11 @@
 -fvar-tracking-assignments-toggle
 -fvar-tracking-uninit
 -fvariable-expansion-in-unroller
--fvect-cost-model=[default]
+-fvect-cost-model=unlimited
 -fvect-cost-model=cheap
 -fvect-cost-model=dynamic
 -fvpt
 -fweb
 -fwrapv
+
+
