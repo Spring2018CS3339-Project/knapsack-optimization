@@ -8,7 +8,6 @@
 -falign-jumps
 -falign-labels
 -falign-loops
--fassociative-math
 -fasynchronous-unwind-tables
 -fauto-inc-dec
 -fbranch-count-reg
@@ -27,7 +26,6 @@
 -fcx-limited-range
 -fdce
 -fdefer-pop
--fdelayed-branch
 -fdelete-dead-exceptions
 -fdelete-null-pointer-checks
 -fdevirtualize
@@ -215,10 +213,8 @@
 -funsafe-math-optimizations
 -funswitch-loops
 -funwind-tables
--fvar-tracking
 -fvar-tracking-assignments
 -fvar-tracking-assignments-toggle
--fvar-tracking-uninit
 -fvariable-expansion-in-unroller
 -fvect-cost-model=unlimited
 -fvect-cost-model=cheap
@@ -226,5 +222,4 @@
 -fvpt
 -fweb
 -fwrapv
-
 
