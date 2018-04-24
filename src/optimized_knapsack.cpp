@@ -5,7 +5,7 @@
 #include <limits.h>
 #include <sstream>
 #include <string>
-
+#include <omp.h>
 
 using namespace std;
 
@@ -127,8 +127,8 @@ void looprun(int **itemsjo) {
          #ifdef DEBUG
          printf("\n*** Spawning ***\n");
          #endif
-         //      omp_set_num_threads(AVAILTHREAD);
-         //#pragma omp parallel for
+         omp_set_num_threads(AVAILTHREAD);
+         #pragma omp parallel for
          for (int t = 1; t <= AVAILTHREAD; t++) {
             #ifdef DEBUG	
             printf("Item = %d\tBlock : %d:%d\n", t + (K - 1), x - ((t - 1) * BLOCK), (x - ((t - 1) * BLOCK) + BLOCK - 1));
