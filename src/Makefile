@@ -1,6 +1,6 @@
 exe=test
 input=input
-ffile=flags_levels.txt
+ffile=flags_425.txt
 
 .PHONY: clean optimization_test run
 
