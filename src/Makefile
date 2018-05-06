@@ -6,15 +6,13 @@ ffile=flags_5_5.txt
 
 run: optimization_test clean
 
-run: parallel_test clean
+run_parallel: parallel_test clean
 
 optimization_test: 
 	./execute_test.sh $(exe) $(input) $(ffile)
-
 parallel_test:
 	./execute_optimization_test.sh $(exe) $(input) $(ffile)
 clean:
 	rm -f *.dat
-
 cleandata:
 	rm -f *.csv *.out
