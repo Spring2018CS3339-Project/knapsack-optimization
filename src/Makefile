@@ -13,6 +13,6 @@ optimization_test:
 parallel_test:
 	./execute_optimization_test.sh $(exe) $(input) $(ffile)
 clean:
-	rm -f *.dat
+	rm -f $(exe) *.dat
 cleandata:
 	rm -f *.csv *.out
