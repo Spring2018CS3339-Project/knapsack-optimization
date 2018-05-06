@@ -1,0 +1,23 @@
+-O0
+-O1
+-O2
+-O3
+-O3 -fmodulo-sched -fmodulo-sched-allow-regmoves -fselective-scheduling -floop-unroll-and-jam -ftree-vectorize -fgraphite-identity -freorder-blocks-and-partition -ftracer -fipa-pta -fnothrow-opt -ffloat-store -funroll-all-loops -fsched-spec-load
+-O3 -fmodulo-sched-allow-regmoves -fselective-scheduling -floop-unroll-and-jam -ftree-vectorize -fgraphite-identity -freorder-blocks-and-partition -ftracer -fipa-pta -fnothrow-opt -ffloat-store -funroll-all-loops -fsched-spec-load
+-O3 -fmodulo-sched -fselective-scheduling  -fgraphite-identity -freorder-blocks-and-partition -fipa-pta -fnothrow-opt -ffloat-store -funroll-all-loops -fsched-spec-load
+-O3 -fmodulo-sched -fselective-scheduling -ftree-vectorize  -fgraphite-identity -freorder-blocks-and-partition -fipa-pta -fnothrow-opt -ffloat-store -funroll-all-loops -fsched-spec-load
+-O3 -fwrapv
+-O3 -fwrapv -fmodulo-sched -fmodulo-sched-allow-regmoves -fselective-scheduling -floop-unroll-and-jam -ftree-vectorize -fgraphite-identity -freorder-blocks-and-partition -ftracer -fipa-pta -fnothrow-opt -ffloat-store -funroll-all-loops -fsched-spec-load
+-O3 -fmodulo-sched
+-O3 -fmodulo-sched-allow-regmoves
+-O3 -fmodulo-sched -fmodulo-sched-allow-regmoves
+-O3 -fselective-scheduling
+-O3 -floop-unroll-and-jam
+-O3 -ftree-vectorize
+-O3 -fgraphite-identity
+-O3 -freorder-blocks-and-partition
+-O3 -ftracer
+-O3 -fipa-pta
+-O3 -fnothrow-opt
+-O3 -ffloat-store
+-O3 -funroll-all-loops
