@@ -11,7 +11,7 @@ flags=$3
 ts=$(date +'%s')
 spreadsheet="data_run_$ts.csv"
 topdata="top_output_$ts.out"
-file="knapsack.cpp"
+file="optimized_knapsack.cpp"
 timeout="time_data.dat"
 stdout="exc.dat"
 
