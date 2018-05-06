@@ -2,13 +2,17 @@ exe=test
 input=input
 ffile=flags_5_5.txt
 
-.PHONY: clean optimization_test run_test
+.PHONY: clean optimization_test parallel_test run run_parallel
 
-run: run_test clean
+run: optimization_test clean
 
-optimization_test:
+run: parallel_test clean
+
+optimization_test: 
+	./execute_test.sh $(exe) $(input) $(ffile)
+
+parallel_test:
 	./execute_optimization_test.sh $(exe) $(input) $(ffile)
-
 clean:
 	rm -f *.dat
 
