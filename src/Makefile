@@ -2,15 +2,15 @@ exe=test
 input=input
 ffile=flags_withO0.txt
 
-.PHONY: clean optimization_test run
+.PHONY: clean optimization_test run_test
 
-run: optimization_test clean
+run: run_test clean
 
 optimization_test:
-	./execute_test.sh $(exe) $(input) $(ffile)
+	./execute_optimization_test.sh $(exe) $(input) $(ffile)
 
 clean:
-	rm *.dat
+	rm -f *.dat
 
 cleandata:
-	rm *.csv *.out
+	rm -f *.csv *.out
