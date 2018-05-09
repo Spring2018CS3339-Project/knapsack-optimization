@@ -1,0 +1,10 @@
+-O0
+-O1
+-O2
+-O3
+-O3 -fmodulo-sched -fselective-scheduling  -fgraphite-identity -freorder-blocks-and-partition -fipa-pta -fnothrow-opt -ffloat-store -funroll-all-loops -fsched-spec-load
+-O3 -fmodulo-sched -fselective-scheduling -ftree-vectorize  -fgraphite-identity -freorder-blocks-and-partition -fipa-pta -fnothrow-opt -ffloat-store -funroll-all-loops -fsched-spec-load
+-O3 -fselective-scheduling
+-O3 -ftracer
+-O3 -funroll-all-loops
+-O3 -fwhole-program
